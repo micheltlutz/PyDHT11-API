@@ -1,5 +1,6 @@
 import Adafruit_DHT
 import logging
+import uvicorn
 
 from decouple import config
 from fastapi import FastAPI, HTTPException, status
@@ -61,6 +62,5 @@ def get_dht11_data():
         raise HTTPException(status_code=500, detail="Erro interno do servidor.")
 
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+
+uvicorn.run(app, host="0.0.0.0", port=8000)
