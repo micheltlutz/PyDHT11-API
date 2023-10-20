@@ -1,0 +1,6 @@
+Adafruit_DHT
+fastapi[all]~=0.103.2
+uvicorn
+python-jose
+pydantic~=2.4.2
+python-decouple
