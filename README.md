@@ -4,10 +4,14 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 
+[![micheltlutz github](https://img.shields.io/badge/GitHub-micheltlutz-181717.svg?style=flat&logo=github)](https://github.com/micheltlutz)
+[![python](https://img.shields.io/badge/Python-3.11-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+
+
 ## Environment
 
 - Python 3.11.+ (3.9.+ or 3.10.+ should work too)
-- Raspberry Pi 3B+ (or any other Raspberry Pi with GPIO pins)
+- Raspberry Pi 2B+ (or any other Raspberry Pi with GPIO pins)
 - DHT11 sensor
 
 ## Setup steps (Raspberry Pi)
