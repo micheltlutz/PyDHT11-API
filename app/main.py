@@ -61,8 +61,9 @@ def get_dht11_data():
         
         if humidity is not None and temperature is not None:
             return {
-                "temperature": f"{temperature:.2f}C",
-                "humidity": f"{humidity:.2f}%"
+                "temperature": f"{temperature:.0f}",
+                "type": "Celcius",
+                "humidity": f"{humidity:.0f}"
             }
         else:
             logging.error("Falha ao receber a leitura do sensor DHT11.")
@@ -70,7 +71,3 @@ def get_dht11_data():
     except Exception as e:
         logging.error(f"Erro ao ler o sensor DHT11: {e}")
         raise HTTPException(status_code=500, detail="Erro interno do servidor.")
-
-
-
-#uvicorn.run(app, host="0.0.0.0", port=8000)
