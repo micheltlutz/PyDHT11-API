@@ -6,11 +6,21 @@ from decouple import config
 from fastapi import FastAPI, HTTPException, status
 from fastapi.responses import JSONResponse
 from fastapi.responses import RedirectResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 app = FastAPI()
+
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows any origin. Don't do this in production!
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],
+)
 
 # Definir o tipo de sensor
 DHT_SENSOR = Adafruit_DHT.DHT11
@@ -63,4 +73,4 @@ def get_dht11_data():
 
 
 
-uvicorn.run(app, host="0.0.0.0", port=8000)
+#uvicorn.run(app, host="0.0.0.0", port=8000)
