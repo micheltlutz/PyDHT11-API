@@ -1,6 +1,5 @@
 import Adafruit_DHT
 import logging
-import uvicorn
 
 from decouple import config
 from fastapi import FastAPI, HTTPException, status
