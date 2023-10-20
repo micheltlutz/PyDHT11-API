@@ -28,3 +28,13 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
+
+## Access
+
+> Change localhost to your Raspberry Pi IP address to access from another device
+
+- [http://localhost:8000/docs](http://localhost:8000/docs)
+
+
+
+![Routes Available](readme_files/api.png "Routes Available")
